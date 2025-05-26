@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TO-Do list </h1>
+    <h3>Want a quit the task write "list"</h3>
+    <h3>Want a add the task write "add"</h3>
+    <h3>Want a delete the task write "delete"</h3>
+    <h3>Want a list the task write "list"</h3>
+
+    <script>
+        let req=prompt('Enter the request!')
+        let data=[]
+        while(true){
+            if(req=='quit'){
+                console.log('you are quited.')
+                break;
+            }
+            if(req=='add'){
+                let task=prompt('Write the task, you want to add.')
+                data.push(task)
+            }else if(req=='list'){
+                console.log('===================')
+                for(let tasks of data){
+                    console.log(tasks)
+                }
+                console.log('===================')
+            }else if(req=='delete'){
+                let idx=prompt('rigth the index, you want to delete.')
+                data.splice(idx,1)
+            }else{
+                console.log('wrong Input');
+            }
+
+            req=prompt('Enter the request!')
+
+        }
+
+    </script>
+</body>
+</html>

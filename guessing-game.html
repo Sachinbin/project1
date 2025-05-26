@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let max=prompt("enter the max number")
+        let randomNum = Math.floor(Math.random() * max) + 1;
+        console.log(randomNum)
+        let guess = prompt(`please guess the number!`)
+        while (true) {
+            if (guess == 'quit') {
+                console.log('You are quited.')
+                break;
+            }
+            if (guess == randomNum) {
+                console.log("Congratulation your guess is rigth. ")
+                break;
+            } else if (guess > randomNum) {
+                console.log("your guess was too large number, please try again")
+             }else {
+                console.log("your guess was too small number, please try again")
+            }
+            guess;
+
+        }
+    </script>
+</body>
+
+</html>
